@@ -9,7 +9,6 @@ export default class BookList extends Component {
         this.setState({ books: bookData.books });
     };
     handleBookUpVote = (bookId) => {
-        console.log(bookId)
         const nextBooks = this.state.books.map((book) => {
             if (book.id === bookId) {
             return Object.assign({}, book, {
@@ -54,7 +53,7 @@ export default class BookList extends Component {
                 pages={book.pages}
                 year={book.year}
                 country={book.country}
-                imageLink={"http://www.100bestbooks.xyz/static/" + book.imageLink}
+                imageLink={"../" + book.imageLink}
                 onUpVote={this.handleBookUpVote}
                 onDownVote={this.handleBookDownVote}
             />
